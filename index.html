@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/2975f57649.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Weather App</title>
+</head>
+
+<body>
+    <div class="weather-app">
+        <h2>Weather Report</h2>
+        <div class="container">
+            <form id="locationInput">
+                <input type="text" class="search" placeholder="Search a Location..">
+                <button type="submit" class="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+            <h1 class="city-name">London</h1>
+            <div class="weather">
+                <img src="./assets/icons/day/113.png" class="icon" width="80" height="80">
+                <span class="condition">Cloudy</span>
+            </div>
+            <div class="detalis">
+                <span class="date">Tuesday Feb 14</span>
+                <span class="time">06:29</span>
+                <h1 class="temp">16&#176;</h1>
+                <div class="wind-humidity">
+                    <div class="wind">
+                        <i class="fa-solid fa-wind wind"></i>
+                        <span class="wind">8km/h</span>
+                    </div>
+                    <div class="humidity">
+                        <!-- <span><i class="fa-solid fa-droplet humidity-icon"></i></span> -->
+                        <span>Umidità:</span>
+                        <span class="">40%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>
