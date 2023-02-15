@@ -14,31 +14,32 @@
     <div class="weather-app">
         <h2>Weather Report</h2>
         <div class="container">
-            <form id="locationInput">
-                <input type="text" class="search" placeholder="Search a Location..">
-                <button type="submit" class="submit">
+            <div class="search">
+                <i class="fa-solid fa-location-dot"></i>
+                <input type="text" class="search" placeholder="Search a Location">
+                <button class="submit">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
-            </form>
-            <h1 class="city-name">London</h1>
+            </div>
+            <div class="in-image">
+                <img src="images/not found.png" width="300" height="300">
+                <p>Invalid Location</p>
+            </div>
             <div class="weather">
-                <img src="./assets/icons/day/113.png" class="icon" width="80" height="80">
-                <span class="condition">Cloudy</span>
+                <img src="">
+                <p class="celsius"></p>
+                <p class="description"></p>
             </div>
             <div class="detalis">
-                <span class="date">Tuesday Feb 14</span>
-                <span class="time">06:29</span>
-                <h1 class="temp">16&#176;</h1>
-                <div class="wind-humidity">
-                    <div class="wind">
-                        <i class="fa-solid fa-wind wind"></i>
-                        <span class="wind">8km/h</span>
-                    </div>
-                    <div class="humidity">
-                        <!-- <span><i class="fa-solid fa-droplet humidity-icon"></i></span> -->
-                        <span>Umidità:</span>
-                        <span class="">40%</span>
-                    </div>
+                <div class="wind-container">
+                    <i class="fa-solid fa-wind wind"></i>
+                    <span class="wind"></span>
+                    <p>Wind</p>
+                </div>
+                <div class="humidity-container">
+                    <i class="fa-solid fa-droplet humidity-icon"></i>
+                    <span class="humidity"></span>
+                    <p>Humidity</p>
                 </div>
             </div>
         </div>
