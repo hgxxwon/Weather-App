@@ -39,7 +39,7 @@ btn.addEventListener("click", (e) => {
         case "Clear":
           img.src = "./images/sun.png";
           container.style.background =
-            "linear-gradient(180deg, #f9e177, #ffbe94)";
+            "linear-gradient(180deg, #ffbe94,#f9e177 )";
           break;
         case "Rain":
           img.src = "./images/storm.png";

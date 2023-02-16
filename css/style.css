@@ -7,7 +7,8 @@
 }
 
 body {
-  background-color: #2e2e2e;
+  background: linear-gradient(90deg, #fc00ff, #00dbde);
+  height: 91.6vh;
 }
 
 .weather-app {
@@ -24,6 +25,7 @@ body {
   color: #fff;
 }
 .weather-app .container {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   position: relative;
   height: 100px;
   width: 400px;
