@@ -16,8 +16,10 @@ btn.addEventListener("click", (e) => {
   )
     .then((response) => response.json())
     .then((data) => {
+      console.log(data);
       if (data.cod === "404") {
         container.style.height = "600px";
+        container.style.background = "#fff";
         weather.style.display = "none";
         detalis.style.display = "none";
         error.style.display = "block";
@@ -36,18 +38,28 @@ btn.addEventListener("click", (e) => {
       switch (data.weather[0].main) {
         case "Clear":
           img.src = "./images/sun.png";
+          container.style.background =
+            "linear-gradient(180deg, #f9e177, #ffbe94)";
           break;
         case "Rain":
           img.src = "./images/storm.png";
+          container.style.background =
+            "linear-gradient(180deg, #5ae4fe, #5acbf9)";
           break;
         case "Snow":
           img.src = "./images/snow.png";
+          container.style.background =
+            "linear-gradient(180deg, #e4e5ea, #c8d3e7)";
           break;
         case "Clouds":
           img.src = "./images/cloudy.png";
+          container.style.background =
+            "linear-gradient(180deg, #6efae6, #72efee)";
           break;
-        case "Haze":
+        case "Fog":
           img.src = "./images/haze.png";
+          container.style.background =
+            "linear-gradient(180deg, #e4e5ea, #c8d3e7)";
           break;
 
         default:
