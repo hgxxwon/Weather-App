@@ -4,12 +4,17 @@ const error = document.querySelector(".in-image");
 const detalis = document.querySelector(".detalis");
 const btn = document.querySelector(".submit");
 
+// evento del bottone Search
+
 btn.addEventListener("click", (e) => {
+  e.preventDefault();
   const city = document.querySelector(".search input").value;
   const api_key = "cea0103d2f8c19ea9202b967bebbc26e";
   if (city === "") {
     return;
   }
+
+  // fetch che si collega all'API del meteo
 
   fetch(
     `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${api_key}`
@@ -17,6 +22,8 @@ btn.addEventListener("click", (e) => {
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
+
+      // se il codice della data è Not Found, appare la schermata di errore
       if (data.cod === "404") {
         container.style.height = "600px";
         container.style.background = "#fff";
@@ -35,6 +42,7 @@ btn.addEventListener("click", (e) => {
       const humidity = document.querySelector(".humidity-container .humidity");
       const wind = document.querySelector(".wind-container .wind");
 
+      // per ogni caso climatico ci sono uno sfondo, un'immagine, e temperatura diversa
       switch (data.weather[0].main) {
         case "Clear":
           img.src = "./images/sun.png";
